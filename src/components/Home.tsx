@@ -21,7 +21,7 @@ const HomeComponent = () => {
       <br />
       <div className="readable-content">
         <p>
-          Hi! My name is Alan Romano. I&apos;m a doctoral graduate at the
+          Hi! My name is Alan Romano. I am a doctoral graduate at the
           University of Southern California under the advisement of&nbsp;
           <Link href="https://weihang-wang.github.io/">
             <span>Dr. Weihang Wang</span>
