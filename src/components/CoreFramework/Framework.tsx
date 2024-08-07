@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import "../../styles/Site.scss";
 import { ThemeProvider } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun } from '@fortawesome/free-solid-svg-icons'
 import AppRoutes from "./Routes";
 import logo from "../../logo.png";
 import RouteHandler from "./RouteHandler";
@@ -154,7 +155,7 @@ function FrameworkComponent() {
                     }}
                   >
                     <span className="icon">
-                      <FontAwesomeIcon icon="sun" />
+                      <FontAwesomeIcon icon={faSun} />
                     </span>
                   </button>
                 </p>

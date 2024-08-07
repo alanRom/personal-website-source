@@ -1,10 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { ProjectCardDetails } from "../../types";
 
-library.add(faFilePdf);
 const ProjectComponent = (projectDetails: ProjectCardDetails) => {
   const { projectName, projectDesc, imageSrc, projectLink, altText, pdfLink } =
     projectDetails;
@@ -14,7 +12,7 @@ const ProjectComponent = (projectDetails: ProjectCardDetails) => {
   const pdfLinkComponent = pdfLink ? (
     <footer className="card-footer">
       <a href={pdfLink} className="card-footer-item">
-        <FontAwesomeIcon icon="file-pdf" />
+        <FontAwesomeIcon icon={faFilePdf} />
         &nbsp;{pdfLink.includes(".pdf") ? "PDF Link" : "Paper Link"}
       </a>
     </footer>

@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogleScholar } from "@fortawesome/free-brands-svg-icons";
+import { faGoogleScholar, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFilePdf, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 import "../styles/resume.scss";
 import {
   FunctionInliningStudyLink,
@@ -43,7 +45,7 @@ const ResumeComponent = () => {
                   </a>
                 </p>
                 <p>
-                  <FontAwesomeIcon icon="envelope" />
+                  <FontAwesomeIcon icon={faEnvelope} />
                   &nbsp;
                   <span>a</span>
                   <span>j</span>
@@ -68,7 +70,7 @@ const ResumeComponent = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={["fab", "linkedin"]} /> LinkedIn
+                    <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                   </a>
                   <p>
                     <a
@@ -223,7 +225,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp;(acceptance: 30%, 142/473)&nbsp;
                     <a href={FunctionInliningStudyLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />
@@ -240,7 +242,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp;(acceptance: 19.2%, 365/1900)&nbsp;
                     <a href={WASPurLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />
@@ -257,7 +259,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp;(acceptance: 15.2%, 54/355)&nbsp;
                     <a href={WobfuscatorLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />
@@ -273,7 +275,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp;(acceptance: 19.2%, 82/427)&nbsp;
                     <a href={WebAssemblyCompilerBugLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />
@@ -289,7 +291,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp; (acceptance: 23%, 138/602) &nbsp;
                     <a href="https://arxiv.org/abs/2103.02669">
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;Paper Link
                     </a>
                     <br />
@@ -305,7 +307,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp; (acceptance: 22.5%, 93/414)&nbsp;
                     <a href={MinerRayLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />
@@ -321,7 +323,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp; (acceptance: 62.5%, 18/29)&nbsp;
                     <a href={WASimLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />
@@ -337,7 +339,7 @@ const ResumeComponent = () => {
                     </a>
                     &nbsp; (acceptance: 33%, 25/75)&nbsp;
                     <a href={WAsmViewLink}>
-                      <FontAwesomeIcon icon="file-pdf" />
+                      <FontAwesomeIcon icon={faFilePdf} />
                       &nbsp;PDF Link
                     </a>
                     <br />

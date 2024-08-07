@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilePdf, faAtlas } from '@fortawesome/free-solid-svg-icons'
 
 const PDFLinkComponent = ({ link, doi }: { link: string; doi?: string }) => {
   let doiComponent = <span />;
@@ -9,7 +10,7 @@ const PDFLinkComponent = ({ link, doi }: { link: string; doi?: string }) => {
         className="card-footer-item"
         style={{ wordBreak: "break-word" }}
       >
-        <FontAwesomeIcon icon="atlas" />
+        <FontAwesomeIcon icon={faAtlas} />
         &nbsp;DOI: {doi}
       </a>
     );
@@ -18,7 +19,7 @@ const PDFLinkComponent = ({ link, doi }: { link: string; doi?: string }) => {
     <footer className="card-footer" style={{ borderTop: "none" }}>
       {doiComponent}
       <a href={link} className="card-footer-item">
-        <FontAwesomeIcon icon="file-pdf" />
+        <FontAwesomeIcon icon={faFilePdf} />
         &nbsp;{link.endsWith(".pdf") ? "PDF" : "Paper"} Link
       </a>
     </footer>
