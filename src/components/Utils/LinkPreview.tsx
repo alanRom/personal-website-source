@@ -1,8 +1,8 @@
-import { ReactNode, useRef } from "react";
+import { ReactNode} from "react";
 
 const LinkPreviewComponent = (props: { href: string; children: ReactNode }) => {
   const { href, children } = props;
-  const iframeEl = useRef(null);
+  // const iframeEl = useRef(null);
   const linkElem = (
     <span>
       <a

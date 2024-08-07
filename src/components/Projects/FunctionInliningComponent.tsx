@@ -2,10 +2,9 @@ import { Helmet } from "react-helmet";
 import { FunctionInliningProjectDetails } from "./researchProjectDetails";
 import styles from "../../styles/project_pages.module.scss";
 import PDFLinkComponent from "./PDFLinkComponent";
-import YoutubeVideoComponent from "./YoutubeVideoComponent";
 
 const FunctionInliningComponent = () => {
-  const { PaperLink, GitHubLink, ShortName, FullTitle, YoutubeVideoID, DOI } =
+  const { PaperLink, GitHubLink, ShortName, FullTitle, DOI } =
     FunctionInliningProjectDetails;
   return (
     <>

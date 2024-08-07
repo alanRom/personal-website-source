@@ -28,9 +28,9 @@ const NewLineComponent = lazy(() => import("../Tools/NewLineApp/NewLineApp"));
 const SetDiffComponent = lazy(
   () => import("../Tools/SetDifferenceApp/SetDifferenceApp")
 );
-const WebAssemblyDecoderComponent = lazy(
-  () => import("../Tools/WebAssemblyDecoder/WebAssemblyDecoding")
-);
+// const WebAssemblyDecoderComponent = lazy(
+//   () => import("../Tools/WebAssemblyDecoder/WebAssemblyDecoding")
+// );
 
 const researchProjectComponents: {
   [key in ResearchProjects]: PreloadableComponent<any>;

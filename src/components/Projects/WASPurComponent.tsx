@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet";
 import { WaspurProjectDetails } from "./researchProjectDetails";
 import PDFLinkComponent from "./PDFLinkComponent";
-import YoutubeVideoComponent from "./YoutubeVideoComponent";
 import styles from "../../styles/project_pages.module.scss";
 
 const WASPurComponent = () => {

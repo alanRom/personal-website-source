@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable react/no-unused-prop-types */
 /* eslint-disable no-unused-vars */
-import React, { ChangeEventHandler, Component, MouseEventHandler } from "react";
+import { ChangeEventHandler, Component, MouseEventHandler } from "react";
 
 declare interface SetComponentProps {
   setIndex: number;
@@ -15,7 +15,7 @@ declare interface SetComponentProps {
   onSetSeparatorButtonChange: (index: number, separator: string) => void;
 }
 
-class SetComponent extends Component {
+class SetComponent extends Component<SetComponentProps> {
   onValueChange: ChangeEventHandler<HTMLTextAreaElement>;
 
   onCommaSeparatorButtonChange: MouseEventHandler<HTMLButtonElement>;
@@ -26,7 +26,6 @@ class SetComponent extends Component {
 
   onRowSeparatorButtonChange: MouseEventHandler<HTMLButtonElement>;
 
-  props!: SetComponentProps;
 
   constructor(props: SetComponentProps) {
     super(props);
