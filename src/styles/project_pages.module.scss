@@ -1,0 +1,15 @@
+
+@media screen and (min-width: 1024px){
+  .titleFit {
+      width: 25em;
+      text-align: center;
+      margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: 1024px){
+  .titleFit {
+      text-align: center;
+  }
+}
