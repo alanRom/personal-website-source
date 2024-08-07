@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Helmet } from "react-helmet";
 import NewsComponent from "./Home/NewsComponent";
 import Link from "./Utils/LinkPreview";

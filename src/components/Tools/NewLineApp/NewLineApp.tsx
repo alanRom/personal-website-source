@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-use-before-define
-import React, { Component } from "react";
+import { Component } from "react";
 import { Helmet } from "react-helmet";
 
 declare interface NewLineState {

@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build && ./makeSublinks.sh",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -r https://github.com/alan-romano/alan-romano.github.io.git -b main -d build"
   },
   "dependencies": {
     "react": "^18.3.1",

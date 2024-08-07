@@ -14,7 +14,7 @@ declare interface NewsItem {
 
 const NewsItemComponent = ({ date, message }: NewsItem) => {
   return (
-    <p>
+    <p key={date}>
       <b>{date}:</b>&nbsp;{message}
     </p>
   );
