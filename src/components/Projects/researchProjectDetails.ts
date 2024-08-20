@@ -29,13 +29,13 @@ export declare interface ProjectDetailsWithVideo extends ProjectDetails {
   YoutubeVideoID: string;
 }
 
-export const WAsmViewLink = `${import.meta.env.BASE_URL}/WasmView_Visual_Testing_for_WebAssembly_Applications.pdf`;
-export const WASimLink = `${import.meta.env.BASE_URL}/WASim_Understanding_WebAssembly_Applications_through_Classification.pdf`;
-export const MinerRayLink = `${import.meta.env.BASE_URL}/MinerRay_Semantics_Aware_Analysis_for_Ever_Evolving_Cryptojacking_Detection.pdf`;
-export const WebAssemblyCompilerBugLink = `${import.meta.env.BASE_URL}/An_Empirical_Study_of_Bugs_in_WebAssembly_Compilers.pdf`;
-export const WobfuscatorLink = `${import.meta.env.BASE_URL}/Wobfuscator_Obfuscating_JavaScript_Malware_via_Opportunistic_Translation_to_WebAssembly.pdf`;
-export const WASPurLink = `${import.meta.env.BASE_URL}/Automated_WebAssembly_Function_Purpose_Identification_With_Semantics-Aware_Analysis.pdf`;
-export const FunctionInliningStudyLink = `${import.meta.env.BASE_URL}/When_Function_Inlining_Meets_WebAssembly__Counterintuitive_Impacts_on_Runtime_Performance.pdf`;
+export const WAsmViewLink = `/WasmView_Visual_Testing_for_WebAssembly_Applications.pdf`;
+export const WASimLink = `/WASim_Understanding_WebAssembly_Applications_through_Classification.pdf`;
+export const MinerRayLink = `/MinerRay_Semantics_Aware_Analysis_for_Ever_Evolving_Cryptojacking_Detection.pdf`;
+export const WebAssemblyCompilerBugLink = `/An_Empirical_Study_of_Bugs_in_WebAssembly_Compilers.pdf`;
+export const WobfuscatorLink = `/Wobfuscator_Obfuscating_JavaScript_Malware_via_Opportunistic_Translation_to_WebAssembly.pdf`;
+export const WASPurLink = `/Automated_WebAssembly_Function_Purpose_Identification_With_Semantics-Aware_Analysis.pdf`;
+export const FunctionInliningStudyLink = `/When_Function_Inlining_Meets_WebAssembly__Counterintuitive_Impacts_on_Runtime_Performance.pdf`;
 export const FlakyUITestLink = `https://arxiv.org/abs/2103.02669`;
 
 
