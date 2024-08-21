@@ -41,9 +41,9 @@ function FrameworkComponent() {
                 <img
                   src={logo}
                   alt="Logo"
-                  width="28px"
-                  height="28px"
-                  style={{ fontWeight: "lighter", marginRight: "10px" }}
+                  width="30px"
+                  height="30px"
+                  style={{ marginRight: "10px", marginBottom: '-2px' }}
                 />
                 Alan Romano
               </NavLink>
