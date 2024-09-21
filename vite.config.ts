@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     VitePWA({ 
       registerType: 'autoUpdate', 
-      includeAssets:['favicon.ico', '*.pdf', '*.png'],
+      includeAssets:['favicon.ico', '*.pdf', '*.png', '*.avif'],
       manifest: {
         name: 'Alan Romano\'s Personal Website ',
         short_name: 'AlanSite',
