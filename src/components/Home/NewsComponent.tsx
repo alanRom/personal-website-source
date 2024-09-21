@@ -44,10 +44,10 @@ class NewsComponent extends Component {
         date: "May 4, 2023",
         message: (
           <span>
-            <a href={FunctionInliningStudyLink}>
+            <NavLink to="/function-inlining.html">
               &quot;When Function Inlining Meets WebAssembly: Counterintuitive
               Impacts on Runtime Performance
-            </a>
+            </NavLink>
             &quot; accepted to&nbsp;
             <a href="https://2023.esec-fse.org/track/fse-2023-research-papers">
               ESEC/FSE 2023
@@ -60,11 +60,11 @@ class NewsComponent extends Component {
         date: "January 25, 2023",
         message: (
           <span>
-            <a href={WASPurLink}>
+            <NavLink to="/waspur.html">
               {" "}
               &quot;Automated WebAssembly Function Purpose Identification With
               Semantics-Aware Analysis&quot;
-            </a>
+            </NavLink>
             &nbsp;accepted to&nbsp;
             <a href="https://www2023.thewebconf.org/">TheWebConf 2023</a>!
           </span>
@@ -92,11 +92,10 @@ class NewsComponent extends Component {
         date: "December 6, 2021",
         message: (
           <span>
-            <a href={WobfuscatorLink}>
-              {" "}
+           <NavLink to="/wobfuscator.html">
               &quot;Wobfuscator: Obfuscating JavaScript Malware via
               Opportunistic Translation to WebAssembly&quot;
-            </a>
+            </NavLink>
             &nbsp;accepted to&nbsp;
             <a href="https://www.ieee-security.org/TC/SP2022/program-papers.html">
               S&P 2022
