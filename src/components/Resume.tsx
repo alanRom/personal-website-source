@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogleScholar, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGoogleScholar, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFilePdf, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import "../styles/resume.scss";
@@ -13,7 +13,7 @@ import {
   WebAssemblyCompilerBugLink,
   WobfuscatorLink,
 } from "./Projects/researchProjectDetails";
-import selfie from "../me.png";
+import selfie from "../headshot_edited_squared_small_99.avif";
 
 const ResumeComponent = () => {
   return (
@@ -29,7 +29,7 @@ const ResumeComponent = () => {
         <div className="column is-narrow">
           <div className="card">
             <div className="card-image">
-              <figure className="image is-rounded">
+              <figure className="image is-1by1">
                 <img src={selfie} alt="Picture of Alan Romano" />
               </figure>
             </div>
@@ -72,7 +72,17 @@ const ResumeComponent = () => {
                   >
                     <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
                   </a>
-                  <p>
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/alanRom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon icon={faGithub} /> GitHub
+                  </a>
+                </p>
+                <p>
                     <a
                       href="https://scholar.google.com/citations?user=vQfvfQcAAAAJ"
                       target="_blank"
@@ -80,8 +90,8 @@ const ResumeComponent = () => {
                     >
                       <FontAwesomeIcon icon={faGoogleScholar} /> Google Scholar
                     </a>
-                  </p>
                 </p>
+                
               </div>
             </div>
           </div>
