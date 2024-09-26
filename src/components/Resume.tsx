@@ -23,75 +23,78 @@ interface Experience {
   Location: string
   StartDate: string
   EndDate: string
+  Supervisor: string
   Descriptions: string[]
 }
 
 const ResumeComponent = () => {
-  const profileCard =  <div className="card">
-      <div className="card-image">
-        <figure className="image is-1by1">
-          <img src={selfie} alt="Picture of Alan Romano" />
-        </figure>
-      </div>
-      <div className="card-content">
-        <div className="card-text">
-          <p>
-            <a
-              href="https://www.visitbuffaloniagara.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Buffalo, NY
-            </a>
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faEnvelope} />
-            &nbsp;
-            <span>a</span>
-            <span>j</span>
-            <span>r</span>
-            <span>o</span>
-            <span>m</span>
-            <span>a</span>
-            <span>n</span>
-            <span>o</span>
-            <span>@</span>
-            <span>u</span>
-            <span>s</span>
-            <span>c</span>
-            <span>.</span>
-            <span>e</span>
-            <span>d</span>
-            <span>u</span>
-          </p>
-          <p>
-            <a
-              href="https://www.linkedin.com/in/alan-romano-12395a139/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
-            </a>
-          </p>
-          <p>
-            <a
-              href="https://github.com/alanRom"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} /> GitHub
-            </a>
-          </p>
-          <p>
+  const profileCard =   <div className="column is-3">
+      <div className="card headshot" >
+        <div className="card-image">
+          <figure className="image is-1by1">
+            <img src={selfie} alt="Picture of Alan Romano" />
+          </figure>
+        </div>
+        <div className="card-content">
+          <div className="card-text">
+            <p>
               <a
-                href="https://scholar.google.com/citations?user=vQfvfQcAAAAJ"
+                href="https://www.visitbuffaloniagara.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faGoogleScholar} /> Google Scholar
+                Buffalo, NY
               </a>
-          </p>
-          
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faEnvelope} />
+              &nbsp;
+              <span>a</span>
+              <span>j</span>
+              <span>r</span>
+              <span>o</span>
+              <span>m</span>
+              <span>a</span>
+              <span>n</span>
+              <span>o</span>
+              <span>@</span>
+              <span>u</span>
+              <span>s</span>
+              <span>c</span>
+              <span>.</span>
+              <span>e</span>
+              <span>d</span>
+              <span>u</span>
+            </p>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/alan-romano-12395a139/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://github.com/alanRom"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} /> GitHub
+              </a>
+            </p>
+            <p>
+                <a
+                  href="https://scholar.google.com/citations?user=vQfvfQcAAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGoogleScholar} /> Google Scholar
+                </a>
+            </p>
+            
+          </div>
         </div>
       </div>
     </div>
@@ -359,152 +362,115 @@ const ResumeComponent = () => {
       </div>
     </section>;
 
+  const makeExperienceView = (exp: Experience) => <div className="columns is-mobile">
+    <div className="column">
+      <b>{exp.Company}</b>,&nbsp;{exp.Location}<br />
+      <b>{exp.Title}</b>, {exp.Supervisor} 
+      <ul>
+        {exp.Descriptions.map(desc => <li>{desc}</li>)}
+        
+      </ul>
+    </div>
+    <div className="column is-4">
+      <b>{exp.StartDate}-{exp.EndDate}</b>
+    </div>
+    </div>
+
   const researchExperiences: Experience[] = [
     {
-      Company: '',
-      Title: '',
-      Location: '',
-      StartDate: '',
-      EndDate: '',
-      Descriptions: ['']
-    }
-  ] 
+      Company: 'University of Southern California',
+      Title: 'Research Assistant',
+      Location: 'Los Angeles, CA',
+      Supervisor: 'Dr. Weihang Wang',
+      StartDate: 'August 2022',
+      EndDate: 'August 2024',
+      Descriptions: [
+        'Investigated counterintuitive impacts of compiler optimizations slowing WebAssembly modules by as much as 15.5x',
+        'Constructed syntax-resilient machine-learning classifier for identifying 189 distinct WebAssembly function purposes',
+        'Managed complex software systems collecting and analyzing large-scale quantities (>2TB) of SQL data'
+      ]
+    },
+    {
+      Company: 'University at Buffalo, SUNY',
+      Title: 'Research Assistant',
+      Location: 'Buffalo, NY',
+      Supervisor: 'Dr. Weihang Wang',
+      StartDate: 'August 2019',
+      EndDate: 'August 2022',
+      Descriptions: [ 
+        'Designed Wobfuscator, a novel and effective JavaScript obfuscation scheme leveraging WebAssembly',
+        'Qualitatively and quantitatively analyzed 1,054 bugs within three popular WebAssembly compilers to improve testing',
+        'Inspected root causes, symptoms, and bug fixes of 235 flaky UI tests in web and Android projects gathered from GitHub ',
+        'Leveraged symbolic execution to detect JavaScript/WebAssembly crypto miners used in 901 websites',
+        'Constructed a machine-learning-based WebAssembly purpose classifier identifying 11 distinct purpose categories ',
+        'Coordinated data collection experiments and weekly status meeting with external research collaborators'
+      ]
+    },
+    {
+      Company: 'New Jersey Institute of Technology',
+      Title: 'Undergraduate Researcher',
+      Location: 'Newark, NJ',
+      Supervisor: 'Dr. Michael Bieber',
+      StartDate: 'May 2016',
+      EndDate: 'August 2018',
+      Descriptions: [
+        'Interviewed and managed a team of four developers to code Participatory Learning education platform',
+        'Organized weekly meetings to track development progress and provide guidance to address technical holdups',
+        'Developed secure log-in, assignment creation, and assignment pages using React, Node.js, Redis, JWT, and MySQL',
+        'Redesigned user interface design of student and instructor task dashboard from feedback collected through user studies',
+        'Mentored two high school interns in JavaScript and React development and coordinated assignment editor UI extensions',
+      ]
+    },
+  ]
+
+  const researchExperienceView = researchExperiences.map(makeExperienceView)
   const researchSection = <section>
       <h2 className="subtitle">Research Experience</h2>
-        <div className="columns is-mobile">
-          <div className="column">
-            <b>University of Southern California</b>, Los Angeles, CA <br />
-            <b>Research Assistant</b>, Dr. Weihang Wang
-            <ul>
-              <li>
-              Investigated counterintuitive impacts of compiler optimizations slowing WebAssembly modules by as much as 15.5x
-              </li>
-              <li>
-              Constructed syntax-resilient machine-learning classifier for identifying 189 distinct WebAssembly function purposes
-              </li>
-              <li>
-              Managed complex software systems collecting and analyzing large-scale quantities (&gt;2TB) of SQL data
-              </li>
-            </ul>
-          </div>
-          <div className="column is-4">
-            <b>August 2022 - August 2024</b>
-          </div>
-        </div>
-        <br/>
-        <div className="columns is-mobile">
-            <div className="column">
-              <b>University at Buffalo, SUNY</b>, Buffalo, NY <br />
-              <b>Research Assistant</b>, Dr. Weihang Wang
-              <ul>
-                <li>
-                  Designed Wobfuscator, a novel and effective JavaScript obfuscation scheme leveraging WebAssembly
-                </li>
-                <li>
-                  Qualitatively and quantitatively analyzed 1,054 bugs within three popular WebAssembly compilers to improve testing
-                </li>
-                <li>
-                  Inspected root causes, symptoms, and bug fixes of 235 flaky UI tests in web and Android projects gathered from GitHub
-                </li>
-                <li>
-                  Leveraged symbolic execution to detect JavaScript/WebAssembly crypto miners used in 901 websites
-                </li>
-                <li>
-                  Constructed a machine-learning-based WebAssembly purpose classifier identifying 11 distinct purpose categories
-                </li>
-                <li>
-                  Coordinated data collection experiments and weekly status meeting with external research collaborators
-                </li>
-              </ul>
-            </div> 
-          <div className="column is-4">
-            <b>August 2019 - August 2022</b>
-          </div>
-          </div>
-          <br />
-        <div className="columns is-mobile">
-          <div className="column"> 
-            <b>New Jersey Institute of Technology</b>
-            , Newark, NJ <br />
-            <b>Undergraduate Researcher</b>, Dr. Michael Bieber
-            <ul>
-              <li>
-                Led a team of four programmers to develop Participatory
-                Learning experimental education platform
-              </li>
-              <li>
-                Created necessary webpages using React and Node.js to
-                increase flexibility of possible assignment structure in
-                the system
-              </li>
-              <li>
-                Managed all frontend aspects of system design and
-                implementation
-              </li>
-            </ul>
-          </div>
-        <div className="column is-4">
-        <b>May 2016 - August 2018</b>
-        
-        </div>
-          
-      </div>
+        {researchExperienceView}
     </section>;
 
+  const teachingExperiences: Experience[] = [
+    {
+      Company: 'University at Buffalo, SUNY',
+      Title: 'Teaching Assistant',
+      Location: 'Buffalo, NY',
+      Supervisor: 'Dr. Matthew Hertz',
+      StartDate: 'August 2018',
+      EndDate: 'August 2019',
+      Descriptions: [
+        'Assisted in managing CSE 116 entry-level and CSE 542 master\'s-level courses',
+        'Clarified any questions that students would have in-class',
+        'Led in-person classes during professor absence'
+      ]
+    },
+  ]
+  const teachingExperienceView = teachingExperiences.map(makeExperienceView)
   const teachingSection = <section>
       <h2 className="subtitle">Teaching Experience</h2>
-      <div className="columns is-mobile">
-        <div className="column">
-          <div>
-            <b>University at Buffalo, SUNY</b>, Buffalo, NY <br />
-            <b>Teaching Assistant</b>, Dr. Matthew Hertz
-            <ul>
-              <li>
-                Assisted in managing CSE 116 entry-level and CSE 542
-                master’s-level courses
-              </li>
-              <li>
-                Clarified any questions that students would have in-class
-              </li>
-              <li>Led in-person classes during professor absence</li>
-            </ul>
-          </div>
-        </div>
-        <div className="column is-4">
-          <b>August 2018 - August 2019</b>
-        </div>
-      </div>
+     {teachingExperienceView}
     </section>;
+
+  const professionalExperiences = [
+    {
+      Company: 'United Parcel Service',
+      Title: 'Enterprise Business Intelligence Intern/Co-Op',
+      Location: 'Mahwah, NJ',
+      Supervisor: 'Meryl Aronowitz',
+      StartDate: 'June 2017',
+      EndDate: 'August 2018',
+      Descriptions: [
+        'Collaborated with development and quality assurance teams to convert legacy web system from ColdFusion to .NET/C#',
+        'Incorporated 5 new business intelligence metrics collected and presented within Power BI manager dashboard and reports',
+        'Implemented SFTP file upload functionality into .NET website',
+        'Designed new schema and stored procedures in SQL Server to fetch and store user profile information and procurement requests',
+       ]
+    },
+  ]
+  const professionalExperienceView = professionalExperiences.map(makeExperienceView)
 
   const professionalExperienceSection = <section>
       <h2 className="subtitle">Professional Experience</h2>
-      <div className="columns is-mobile">
-        <div className="column">
-          <div>
-            <b>United Parcel Service</b>, Mahwah, NJ
-            <br />
-            <b>Enterprise Business Intelligence Intern</b>, Meryl
-            Aronowitz
-            <ul>
-              <li>
-                Extended functionality of existing online management
-                system used to maintain the allowed standards for all
-                corporate IT software and hardware procurement and usage
-              </li>
-              <li>
-                Collaborated with team to convert legacy website from
-                ColdFusion to .NET
-              </li>
-              <li>
-                Implemented secure file upload functionality into website
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="column is-4">
-          <b>June 2017 - August 2018</b>
-        </div>
-      </div>
+      {professionalExperienceView}
     </section>;
 
   const presentationsSection =  <section>
@@ -620,9 +586,7 @@ const ResumeComponent = () => {
         />
       </Helmet>
       <div className="columns">
-        <div className="column is-narrow">
          {profileCard}
-        </div>
         <div className="column resume">
           <br />
           {educationSection}
