@@ -3,7 +3,8 @@ import NewsComponent from "./Home/NewsComponent";
 import Link from "./Utils/LinkPreview";
 //@ts-ignore
 import me from "../me.webp";
-import selfie from "../headshot_edited_squared_small_99.avif";
+import selfie_avif from "../headshot_edited_squared_small_99.avif";
+import selfie_jpg from "../headshot_edited_squared_small.jpg";
 import "../styles/Home.scss";
 
 const HomeComponent = () => {
@@ -17,9 +18,11 @@ const HomeComponent = () => {
         />
       </Helmet>
       <br />
-      <figure className="image">
-        <img width="1024px" height="1024px" src={selfie} alt="Alan Romano" />
-      </figure>
+      <picture className="image">
+        <source srcSet={selfie_avif} type="image/avif" />
+        <img width="1024px" height="1024px"  
+            src={selfie_jpg} alt="Headshot of Alan Romano" />
+      </picture>
       <br />
       <div className="readable-content">
         <p>

@@ -359,6 +359,16 @@ const ResumeComponent = () => {
       </div>
     </section>;
 
+  const researchExperiences: Experience[] = [
+    {
+      Company: '',
+      Title: '',
+      Location: '',
+      StartDate: '',
+      EndDate: '',
+      Descriptions: ['']
+    }
+  ] 
   const researchSection = <section>
       <h2 className="subtitle">Research Experience</h2>
         <div className="columns is-mobile">
