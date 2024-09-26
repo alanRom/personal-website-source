@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet";
 import NewsComponent from "./Home/NewsComponent";
 import Link from "./Utils/LinkPreview";
+//@ts-ignore
+import me from "../me.webp";
 import selfie from "../headshot_edited_squared_small_99.avif";
 import "../styles/Home.scss";
 
@@ -15,7 +17,7 @@ const HomeComponent = () => {
         />
       </Helmet>
       <br />
-      <figure className="image is-rounded">
+      <figure className="image">
         <img width="1024px" height="1024px" src={selfie} alt="Alan Romano" />
       </figure>
       <br />
