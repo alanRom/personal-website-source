@@ -406,21 +406,7 @@ const ResumeComponent = () => {
         'Coordinated data collection experiments and weekly status meeting with external research collaborators'
       ]
     },
-    {
-      Company: 'New Jersey Institute of Technology',
-      Title: 'Undergraduate Researcher',
-      Location: 'Newark, NJ',
-      Supervisor: 'Dr. Michael Bieber',
-      StartDate: 'May 2016',
-      EndDate: 'August 2018',
-      Descriptions: [
-        'Interviewed and managed a team of four developers to code Participatory Learning education platform',
-        'Organized weekly meetings to track development progress and provide guidance to address technical holdups',
-        'Developed secure log-in, assignment creation, and assignment pages using React, Node.js, Redis, JWT, and MySQL',
-        'Redesigned user interface design of student and instructor task dashboard from feedback collected through user studies',
-        'Mentored two high school interns in JavaScript and React development and coordinated assignment editor UI extensions',
-      ]
-    },
+    
   ]
 
   const researchExperienceView = researchExperiences.map(makeExperienceView)
@@ -463,7 +449,22 @@ const ResumeComponent = () => {
         'Incorporated 5 new business intelligence metrics collected and presented within Power BI manager dashboard and reports',
         'Implemented SFTP file upload functionality into .NET website',
         'Designed new schema and stored procedures in SQL Server to fetch and store user profile information and procurement requests',
-       ]
+      ]
+    },
+    {
+      Company: 'New Jersey Institute of Technology',
+      Title: 'Full Stack Developer',
+      Location: 'Newark, NJ',
+      Supervisor: 'Dr. Michael Bieber',
+      StartDate: 'May 2016',
+      EndDate: 'August 2018',
+      Descriptions: [
+        'Interviewed and managed a team of four developers to code Participatory Learning education platform',
+        'Organized weekly meetings to track development progress and provide guidance to address technical holdups',
+        'Developed secure log-in, assignment creation, and assignment pages using React, Node.js, Redis, JWT, and MySQL',
+        'Redesigned user interface design of student and instructor task dashboard from feedback collected through user studies',
+        'Mentored two high school interns in JavaScript and React development and coordinated assignment editor UI extensions',
+      ]
     },
   ]
   const professionalExperienceView = professionalExperiences.map(makeExperienceView)
