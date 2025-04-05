@@ -1,4 +1,4 @@
-import { ReactNode, useRef} from "react";
+import { ReactNode} from "react";
 import './LinkPreview.scss';
 import * as HoverCard from "@radix-ui/react-hover-card";
 
