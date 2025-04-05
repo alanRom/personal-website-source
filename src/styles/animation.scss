@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-.box{
+.preview-box{
   display: none;
   width: 60vw;
   height:25vw;
@@ -38,7 +38,7 @@
   }
 }
 
-a:hover + .box,.box:hover{
+a:hover + .preview-box,.preview-box:hover{
   display: block;
   position: absolute;
   z-index: 100;
@@ -46,7 +46,7 @@ a:hover + .box,.box:hover{
 
 
 @media screen and (max-width: 1024px){
-  a:hover + .box,.box:hover{
+  a:hover + .preview-box,.preview-box:hover{
     display: none;
   }
 }

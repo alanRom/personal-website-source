@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+import LinkPreviewComponent from "../Utils/LinkPreview";
 
 declare interface NewsItem {
   date: string;
@@ -25,6 +26,15 @@ class NewsComponent extends Component {
 
   render() {
     const newsItems: NewsItem[] = [
+      {
+        date: "March 31, 2025",
+        message: (
+          <span>
+            I am excited to be joining the AI Platform team at&nbsp;<a href="https://www.accrete.ai/" target="_blank"
+      rel="noopener noreferrer dns-prefetch prefetch">Accrete</a>!
+          </span>
+        ),
+      },
       {
         date: "May 28, 2024",
         message: (
