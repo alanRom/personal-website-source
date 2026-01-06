@@ -38,33 +38,31 @@ const ResumeComponent = () => {
         <div className="card-content">
           <div className="card-text">
             <p>
-              <a
-                href="https://www.visitbuffaloniagara.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buffalo, NY
-              </a>
+              New York, NY
             </p>
             <p>
               <FontAwesomeIcon icon={faEnvelope} />
               &nbsp;
               <span>a</span>
-              <span>j</span>
-              <span>r</span>
-              <span>o</span>
-              <span>m</span>
+              <span>l</span>
               <span>a</span>
               <span>n</span>
-              <span>o</span>
-              <span>@</span>
-              <span>u</span>
-              <span>s</span>
-              <span>c</span>
               <span>.</span>
-              <span>e</span>
-              <span>d</span>
+              <span>r</span>
+              <span>o</span>  
+              <span>m</span>
+              <span>@</span>
+              <span>o</span>
               <span>u</span>
+              <span>t</span>
+              <span>l</span>
+              <span>o</span>
+              <span>o</span>
+              <span>k</span>
+              <span>.</span>
+              <span>c</span>
+              <span>o</span>
+              <span>m</span>
             </p>
             <p>
               <a
@@ -120,7 +118,13 @@ const ResumeComponent = () => {
       <div className="columns is-mobile">
         <div className="column">
           <div>
-            <b>University at Buffalo, SUNY</b>, Buffalo, NY
+            <b>University at Buffalo, SUNY</b>, <a
+                href="https://www.visitbuffaloniagara.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buffalo, NY
+              </a>
             <ul>
               <li>PhD, Computer Science and Engineering (GPA: 3.95)</li>
               <li>Advised by Dr. Weihang Wang</li>

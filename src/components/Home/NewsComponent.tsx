@@ -1,7 +1,6 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import LinkPreviewComponent from "../Utils/LinkPreview";
 
 declare interface NewsItem {
   date: string;
